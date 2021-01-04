@@ -6,44 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="80dp"
-        android:layout_height="25dp"
-        android:text="Life Goes On"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    <FrameLayout
+        android:id="@+id/fragmentFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/playerLayout"
+        />
 
 
-    <TextView
-        android:layout_width="80dp"
-        android:layout_height="25dp"
-        android:text="BangTan ! "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.182" />
-
-    <ImageView
-        android:id="@+id/img_album"
-        android:layout_width="222dp"
-        android:layout_height="213dp"
-        android:background="@drawable/bangtan_album"
-        tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="185dp"></ImageView>
-
-    <TextView
-        android:id="@+id/txt_msg"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playerLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ssssssssssssssssssssssssssssss"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="437dp" />
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.google.android.exoplayer2.ui.PlayerControlView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground"
+            app:played_color="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
