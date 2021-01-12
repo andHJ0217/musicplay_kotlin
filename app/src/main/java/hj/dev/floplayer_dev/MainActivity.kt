@@ -2,8 +2,8 @@ package hj.dev.floplayer_dev
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.SimpleExoPlayer
+import hj.dev.floplayer_dev.fragment.LyricsFragment
+import hj.dev.floplayer_dev.fragment.MusicPlayFragment
 
 class MainActivity : AppCompatActivity() {
     val musicPlayFragment: MusicPlayFragment by lazy {
