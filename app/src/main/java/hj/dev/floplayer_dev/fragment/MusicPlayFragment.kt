@@ -23,9 +23,9 @@ import retrofit2.Response
 
 class MusicPlayFragment : Fragment(){
     private lateinit var binding: FragmentMusicPlayBinding
-
-    lateinit var onMusicInfoReceivedListener: OnMusicInfoReceivedListener
     val viewModel: MusicPlayFragmentViewModel by viewModels()
+    lateinit var onMusicInfoReceivedListener: OnMusicInfoReceivedListener
+
     interface OnMusicInfoReceivedListener {
         fun onMusicInFoReceived(file: String, lyrics: String)
     }
