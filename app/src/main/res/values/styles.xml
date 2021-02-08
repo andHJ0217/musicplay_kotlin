@@ -9,5 +9,16 @@
     <style name="IntroTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_img</item>
     </style>
-
+    <style name="Widget.App.Button.TextButton.IconOnly" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:minWidth">30dp</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="materialThemeOverlay">@style/ToggleButtonStyleTextColor</item>
+    </style>
+    <style name="ToggleButtonStyleTextColor">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnSurface">@color/textDefaultColor</item>
+    </style>
 </resources>
